@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
     margin: 0;
@@ -21,11 +23,13 @@ h3{
   text-align: center;
     color: #00ffea;
     text-decoration: underline;
+    font-family: 'Share Tech Mono', monospace !important;
 }
 
 h1,h2{
     text-align: center;
     color: #00ffea;
+    font-family: 'Share Tech Mono', monospace !important;
 }
 
 .scene{
@@ -62,13 +66,15 @@ h1,h2{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Share Tech Mono', monospace !important;
   }
 
   .card-back {
     background-color: #b3b3b3;
     transform: rotateY(180deg); /* Initial state - back side hidden */
     background-color: #000000;
-    text-align: center
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace !important;
   }
 
   .card.flipped .card-front {
@@ -312,6 +318,7 @@ path.two {
 
 #mc{
   color: #ffffff;
+  font-family: 'Share Tech Mono', monospace !important;
 }
 
 .github-icon {
@@ -326,5 +333,4 @@ path.two {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: background-color 0.3s;
 }
