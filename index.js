@@ -47,6 +47,8 @@ cross.addEventListener('click',()=>{
     input.value = null;
     card.style.display = 'none';
     card.classList.toggle('flipped');
+    iscc = false;
+    iscf = false;
 });
 
 
