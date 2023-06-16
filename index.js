@@ -14,6 +14,15 @@ const about = document.querySelector('#about');
 const modalBox = document.querySelector('#modal-box');
 const close = document.querySelector('.close');
 
+
+function handleModal(){
+  input.value = null;
+  card.style.display = 'none';
+  card.classList.toggle('flipped');
+  iscc = false;
+  iscf = false;
+}
+
 function predict(rating) {
   if(iscf){
     var ans = Math.round((rating*s)+i);
@@ -25,30 +34,46 @@ function predict(rating) {
   }
 }
 
-wrap.addEventListener('click', function() {
-  card.classList.toggle('flipped');
+function start(){
   var rating = input.value;
-  predict(rating);
+  if(rating!=""){
+    card.classList.toggle('flipped');
+    predict(rating);
+  }
+  else{
+  alert('Please enter a valid rating !')
+  }
+}
+
+wrap.addEventListener('click', function() {
+  var rating = input.value;
+  if(rating!=""){
+    card.classList.toggle('flipped');
+    predict(rating);
+  }
+  else{
+  alert('Please enter a valid rating !')
+  }
 });
 
 cf.addEventListener('click',()=>{
     iscf = true;
     card.style.display = 'block';
-    inpt.textContent ="Enter your Codechef rating : ";
+    inpt.textContent ="Enter your Codechef rating";
+    card.style.animation = '';
+    card.classList.toggle('identifier');
 })
 
 cc.addEventListener('click',()=>{
     iscc = true;
     card.style.display = 'block';
-    inpt.textContent ="Enter your Codeforces rating : ";
+    inpt.textContent ="Enter your Codeforces rating";
+    card.style.animation = '';
+    card.classList.toggle('identifier');
 })
 
 cross.addEventListener('click',()=>{
-    input.value = null;
-    card.style.display = 'none';
-    card.classList.toggle('flipped');
-    iscc = false;
-    iscf = false;
+    handleModal();
 });
 
 
@@ -59,3 +84,15 @@ about.addEventListener("click",()=>{
 close.onclick = function (){
   modalBox.style.display = 'none';
 }
+
+input.addEventListener("keypress", handleEnterKeyPress);
+
+var handleEnterKeyPress = function (event) {
+  if (event.key === "Enter") {
+      event.preventDefault();
+      predict(input.value)
+      card.classList.toggle('flipped');
+
+}
+};
+

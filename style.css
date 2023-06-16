@@ -24,6 +24,15 @@ h3{
     color: #00ffea;
     text-decoration: underline;
     font-family: 'Share Tech Mono', monospace !important;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+h3:hover{
+  border: 1px solid #00ffea;
+  color:#041337;
+  background-color: #00ffea;
+  text-decoration: none;
 }
 
 h1,h2{
@@ -49,14 +58,30 @@ h1,h2{
   transform-origin: center right;
   transition: transform 1s;
   background-color: #000000;
+  animation: identifier .5s ease-in-out;
+}
+
+.identifier{
+  animation: identifier .5s ease-in-out;
+}
+
+@keyframes identifier {
+  from{
+    border-radius: 50%;
+    opacity: 0;
+  }
+  to{
+    border-radius: 0;
+    opacity: 1;
+  }
 }
 
 .card-front, .card-back {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /* Hide the backface of the elements */
-    transition: transform 0.6s; /* Add a smooth transition effect */
+    backface-visibility: hidden; 
+    transition: transform 0.6s; 
   }
   
   .card-front {
@@ -71,18 +96,18 @@ h1,h2{
 
   .card-back {
     background-color: #b3b3b3;
-    transform: rotateY(180deg); /* Initial state - back side hidden */
+    transform: rotateY(180deg); 
     background-color: #000000;
     text-align: center;
     font-family: 'Share Tech Mono', monospace !important;
   }
 
   .card.flipped .card-front {
-    transform: rotateY(180deg); /* Flip the card to show the back side */
+    transform: rotateY(180deg); 
   }
   
   .card.flipped .card-back {
-    transform: rotateY(0deg); /* Flip the card to hide the back side */
+    transform: rotateY(0deg); 
   }
 
 .container{
@@ -306,13 +331,11 @@ path.two {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.4s;
+  transition: all 0.4s ease;
+  text-decoration: none;
 }
 
-.close:hover,
-.close:focus {
-  color: #fff;
-  text-decoration: none;
+.close:hover {
   cursor:pointer;
 }
 
@@ -327,10 +350,21 @@ path.two {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #333;
+  background-color: #565050;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.github-icon:hover{
+  background-color: #00ffea;
+  color: #000000;
+}
+
+a{
+  text-decoration: none;
+  color: #00ffea;
 }
