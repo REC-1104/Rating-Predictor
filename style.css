@@ -273,6 +273,7 @@ path.two {
 .wrapper{
     padding-top: 10px;
     width: 70%;
+    font-family: 'Share Tech Mono', monospace !important;
 }
 
 #inpt{
@@ -369,6 +370,3 @@ a{
   color: #00ffea;
 }
 
-span{
-  font-family: 'Share Tech Mono', monospace !important;
-}
