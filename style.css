@@ -368,3 +368,7 @@ a{
   text-decoration: none;
   color: #00ffea;
 }
+
+span{
+  font-family: 'Share Tech Mono', monospace !important;
+}
